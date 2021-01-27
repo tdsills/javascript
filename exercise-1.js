@@ -77,6 +77,16 @@ console.log(reversePhone(5554735996));
 // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
 //your code...
+let myCar = {
+    make: "Buick",
+    model: "Regal",
+    year: 2011,
+    color: "grey",
+  };
+  
+  console.log(myCar["make"]);
+
+
 
 /************************************************************************************/
 // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
@@ -84,13 +94,31 @@ console.log(reversePhone(5554735996));
 //example : [10,23,3,4] => function() => {10 : 'even', 23 : 'odd', 3 : 'odd', 4 : 'even'}
 
 //your code...
+let arr = [3, 15, 24, 36];
+for (i = 0; i < arr.length; i++) {
+  if (arr[i] % 2 === 0) {
+    console.log(arr[i] + " , even");
+  } else {
+    console.log(arr[i] + " , odd");
+  }
+}
+
 
 /************************************************************************************/
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Write a "for" loop that console.log()'s the first value in the  array, and every 3rd number, i.e. 0, 3, 6, 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
+const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (i = 0; i < 10; i+=3) {
+  if (i % 3 === 0) {
+     
+}
+console.log(i);
 
+HELP
+HELP
+HELP
 /************************************************************************************/
 const foodArray = [
   "potatoes",
@@ -101,6 +129,7 @@ const foodArray = [
   "pudding",
   { program: "TEKcamp" },
 ];
+const foodArray = 
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
 const adjectiveArray = [
@@ -112,8 +141,13 @@ const adjectiveArray = [
   "creamy",
   "amazing",
 ];
+HELP
+HELP
+HELP
 // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
-
+HELP
+HELP
+HELP
 /************************************************************* */
 // Refactor the for() loop to be a while loop.
 
@@ -122,30 +156,41 @@ for (let i = 0; i < 10; i++) {
 }
 
 //your code...
+let i = 0
 
+while (i < 10) {
+    print i;
+    i++;
+}
 /************************************************************* */
 //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
 //your code...
+let x = 30 + 2;
+let y = x * 20;
+let z = y / Math.pow(10, 2);
 
+console.log(z);
+
+// (30 + 2 * 20) / 10^2
 /************************************************************* */
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values :
 
 // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
 
-// 20
-// 0
-// "zero";
-// const zero = 20;
-// null
-// "0"
-// !""
-// {}
-// () => {console.log("hello TEKcamp!");
-// 125
-// undefined
-// ""
+// 20 - truthy: it's a number.
+// 0 - falsy: the number 0 is one of the 5 falsy values
+// "zero";- truthy: string isn't empty
+// const zero = 20; - truthy: the variable is defined.
+// null - falsy: null is one of the 5 falsy values
+// "0" - truthy - string isn't empty
+// !"" - truthy - the empty brackets aren't alone.
+// {} - truthy - empty brackets are truthy
+// () => {console.log("hello TEKcamp!"); - truhy: functions are truthy.
+// 125- truthy: it's a number.
+// undefined- falsy: undefined is one of the 5 falsy value
+// ""- falsy: empty string is one of the 5 falsy value
 
 /************************************************************* */
 // Refactor the following code using a switch statement:
