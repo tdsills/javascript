@@ -51,6 +51,7 @@ function canVote(age) {
     return true;
   }
 }
+console.log(canVote(17));
 
 /************************************************************************************/
 // Write a function that converts a string to an array. It should return an array.
@@ -110,26 +111,27 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 //your code...
 const nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-for (i = 0; i < 10; i+=3) {
+for (i = 0; i < nums.length; i += 3) {
   if (i % 3 === 0) {
-     
+    console.log(i);
+  }
 }
-console.log(i);
 
-HELP
-HELP
-HELP
+
+
 /************************************************************************************/
 const foodArray = [
-  "potatoes",
-  "tamales",
-  "lemon",
-  "strawberries",
-  "chocolate",
-  "pudding",
-  { program: "TEKcamp" },
-];
-const foodArray = 
+    "potatoes",
+    "tamales",
+    "lemon",
+    "strawberries",
+    "chocolate",
+    "pudding",
+    { program: "TEKcamp" },
+  ];
+  let school = foodArray[foodArray.length - 1].program;
+  console.log(school);
+
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
 const adjectiveArray = [
@@ -141,9 +143,15 @@ const adjectiveArray = [
   "creamy",
   "amazing",
 ];
-HELP
-HELP
-HELP
+for (i = 0; i < foodArray.length; i++) {
+    let endsWithS = foodArray[i];
+    if (endsWithS.charAt(endsWithS.length-1).include('s')) {
+        console.log(foodArray[i] + ' is ' + adjectiveArray[i]);
+    } else {
+        console.log(foodArray[i] + ' are ' + adjectiveArray[i]);
+    }
+}
+ 
 // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 HELP
 HELP
@@ -162,6 +170,7 @@ while (i < 10) {
     print i;
     i++;
 }
+console.log("the value of i in the loop is: " + i);
 /************************************************************* */
 //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
@@ -178,8 +187,7 @@ console.log(z);
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values :
 
 // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
-
-// 20 - truthy: it's a number.
+console.log(!!20) - //truthy: it's a number.
 // 0 - falsy: the number 0 is one of the 5 falsy values
 // "zero";- truthy: string isn't empty
 // const zero = 20; - truthy: the variable is defined.
@@ -192,27 +200,37 @@ console.log(z);
 // undefined- falsy: undefined is one of the 5 falsy value
 // ""- falsy: empty string is one of the 5 falsy value
 
+HELP
+HELP
+HELP
 /************************************************************* */
 // Refactor the following code using a switch statement:
 
-const day = "friday";
-
-if (day === "monday") {
-  console.log("we got a long week ahead of us...");
-} else if (day === "tuesday") {
-  console.log(
-    "tuesday's are still beterr than mondays, but LONG way to go still"
-  );
-} else if (day === "wednesday") {
-  console.log("We are smack dab in the middle of the week");
-} else if (day === "thursday") {
-  console.log("Thursday night... the mood is right");
-} else if (day === "friday") {
-  console.log("TGIF.  Friday truly is the best day of the week!");
-} else {
-  console.log("It's a weekend!");
-}
-
+function ifToSwitch(day) {
+    let text = "";
+    switch (day) {
+      case "monday":
+        text = "we got a long week ahead of us...";
+        break;
+      case "tuesday":
+        text =
+          "tuesday's are still beterr than mondays, but LONG way to go still";
+        break;
+      case "wednesday":
+        text = "We are smack dab in the middle of the week";
+        break;
+      case "thursay":
+        text = "Thursday night... the mood is right";
+        break;
+      case "friday":
+        text = "TGIF.  Friday truly is the best day of the week!";
+        break;
+      default:
+        text = "It's a weekend!";
+    }
+    return text;
+  }
+  console.log(ifToSwitch("friday"));
 /************************************************************* */
 // Refactor the following statements to use ternary expressions:
 
@@ -249,7 +267,24 @@ else {
         */
 
 //your code...
-
+let tSills = {
+    fullName: "Taylor Sills",
+    age: 27,
+    gender: "female",
+    goodHealth: "yes",
+    hobbies: ["cooking", "anime", "crocheting"],
+    profession: "Work in Progress",
+    education: "Masters",
+    learn: function () {
+      console.log(this.fullName + " is learning Javacript.");
+    },
+    celebrate: function () {
+      console.log(
+        this.fullName + " will no longer be " + this.age + " come February 1st."
+      );
+    },
+  };
+  console.log(tSills.celebrate());
 /************************************************************* */
 
 {
@@ -348,6 +383,7 @@ const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
 
 function chessCalc(pieces) {
   //your code here
+  let 
 }
 
 /************************************************************* */
