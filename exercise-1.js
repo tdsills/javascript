@@ -413,22 +413,22 @@ console.log(divNums);
   // knight = 3,
   // queen = 9,
   // king = null,
-let randChess = [
-  {piece: "pawn",
-  pieceVal: 1},
-  {piece: "rook",
-  pieceVal: 5},
-  {piece: "bishop",
-  pieceVal: 3},
-  {piece: "knight",
-  pieceVal: 3},
-  {piece: "queen",
-  pieceVal: 9},
-  {piece: "king",
-  pieceVal: null},
-];
+// let randChess = [
+//   {piece: "pawn",
+//   pieceVal: 1},
+//   {piece: "rook",
+//   pieceVal: 5},
+//   {piece: "bishop",
+//   pieceVal: 3},
+//   {piece: "knight",
+//   pieceVal: 3},
+//   {piece: "queen",
+//   pieceVal: 9},
+//   {piece: "king",
+//   pieceVal: null},
+// ];
 
-
+//Couldn't figure this one out.
 
 
 // function chessCalc(pieces, randChess) {
@@ -710,6 +710,7 @@ mapObj.set(['happy', 'sad', 'angry']); //Array & Strings
 //I'm not sure on this one. 
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
+// mapObj.forEach(i => console.log(typeof i));
 
 /************************************************************* */
 //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
@@ -723,14 +724,32 @@ function doMath(x, y) {}
 /************************************************************* */
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
+
+// const multiThree = y*3;
+// function multiple(x) {
+//   function fn(y) {
+//    return function fn(); 
+//    y = y * x;
+    //   }
+// }
+// console.log(multiThree)
 //your code...
 
 //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
+
+// function stockGain(basis) {
+//   let message = ' is how much the stock has increased';
+//   function stocks(yrs) {
+//     let r = .05
+//   }
+// }
 //your code
 
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.
 
+
+// let total = ((function stockGain(500), (function stocks(2));
 //your code...
 
 // DO NOT DELETE THIS EXPORT
