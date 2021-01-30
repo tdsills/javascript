@@ -17,11 +17,15 @@ button.addEventListener("click", function () {
   document.querySelector("#item").value = " ";
   const li = document.createElement("li");
   const span = document.createElement("span");
-  const button2 = document.createElement("button");
-  li.appendChild(spam, button2);
+  const buttonDel = document.createElement("button");
+  li.append(span, buttonDel);
   span.textContent = clicked;
-  button2.textContent = "Delete";
+  buttonDel.textContent = "Delete";
   ul.appendChild(li);
+  buttonDel.addEventListener("click", function () {
+    li.remove();
+  });
+  document.getElementById("item").focus();
 });
 
 // 7. Set the text content of the span to the input element value you saved earlier, and the text content of the button to 'Delete'.
