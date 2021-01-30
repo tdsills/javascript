@@ -4,13 +4,13 @@
 // Write a JavaScript function that iterates the integers from 1 to 100. For multiples of 3 print "TEK" instead of the number and for multiples of 5, print "camp." For numbers that are multiples of both 3 and 5, print "TEKcamp."
 
 //your code...
-// tekCamp();
+// 
 for (let i = 1; i <= 100; i++) {
   if (i % 3 === 0) {
     console.log("TEK");
-  } else if (i % 5 === 0) {
+  } if (i % 5 === 0) {
     console.log("camp");
-  } else if (i % 3 === 0 && i % 5 === 0) {
+  } if (i % 3 === 0 && i % 5 === 0) {
     console.log("TEKcamp");
   } else {
     console.log(i);
@@ -130,7 +130,7 @@ const foodArray = [
     { program: "TEKcamp" },
   ];
   let school = foodArray[foodArray.length - 1].program;
-  console.log(school);
+  // console.log(school);
 
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 
@@ -143,19 +143,25 @@ const adjectiveArray = [
   "creamy",
   "amazing",
 ];
-for (i = 0; i < foodArray.length; i++) {
+function arr(foodArray, adjectiveArray) {
+for (let i = 0; i < foodArray.length; i++) {
     let endsWithS = foodArray[i];
-    if (endsWithS.charAt(endsWithS.length-1).include('s')) {
-        console.log(foodArray[i] + ' is ' + adjectiveArray[i]);
-    } else {
-        console.log(foodArray[i] + ' are ' + adjectiveArray[i]);
+    if (i == 6) {
+      console.log(foodArray[i].program + ' is ' + adjectiveArray[i]);
+    } 
+    else if (foodArray[i].endsWith('s')) { 
+      console.log(foodArray[i] + ' are ' + adjectiveArray[i]);
+    } 
+      else { console.log(foodArray[i] + ' is ' + adjectiveArray[i]);
     }
+  }
 }
- 
+  arr(foodArray,adjectiveArray);
+
+    // if (endsWithS.charAt(endsWithS.length-1).includes('s')) {
+
 // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
-HELP
-HELP
-HELP
+
 /************************************************************* */
 // Refactor the for() loop to be a while loop.
 
@@ -176,33 +182,57 @@ console.log("the value of i in the loop is: " + i);
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
 //your code...
-let x = 30 + 2;
-let y = x * 20;
-let z = y / Math.pow(10, 2);
+let par = 0;
+let exp = 0;
+let multi = 0;
+let divs = 0;
+function step1() {
+  par = 30 + 2;
+  console.log("The result of the first operation is " + par + ".");
+}
+function step2() {
+  exp = 10 ** 2;
+  console.log("The result of the second operation is " + exp + ".");
+}
+function step3() {
+    multi = par * 20;
+    console.log("The result of the third operation is " + multi + ".");
+}
+function step4() {
+      divs = multi / exp;
+      console.log("The result of the fourth operation is " + divs + ".");   
+}
+step1();
+step2();
+step3();
+step4();
 
-console.log(z);
+// let x = 30 + 2;
+// let y = x * 20;
+// let z = y / Math.pow(10, 2);
 
-// (30 + 2 * 20) / 10^2
+// console.log(z);
+
+// (30 + 2) * 20 / 10^2
 /************************************************************* */
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values :
 
 // ex : 3 is truthy, because it is a number, and numbers are type coerced as 'true' when performing logical (boolean) operations.
-console.log(!!20) - //truthy: it's a number.
-// 0 - falsy: the number 0 is one of the 5 falsy values
-// "zero";- truthy: string isn't empty
-// const zero = 20; - truthy: the variable is defined.
-// null - falsy: null is one of the 5 falsy values
-// "0" - truthy - string isn't empty
-// !"" - truthy - the empty brackets aren't alone.
-// {} - truthy - empty brackets are truthy
-// () => {console.log("hello TEKcamp!"); - truhy: functions are truthy.
-// 125- truthy: it's a number.
-// undefined- falsy: undefined is one of the 5 falsy value
-// ""- falsy: empty string is one of the 5 falsy value
+console.log((!!20 ? "truthy" : "falsy") + " it's a number."); -
+console.log((!!0 ? "truthy" : "falsy") + " because the number 0 is one of the 5 falsy values.");
+console.log((!!"zero" ? "truthy" : "falsy") + " string isn't empty.");
+const zero = 20;
+console.log((!!zero ? "truthy" : " falsy") + " the variable is defined.");
+console.log((!!null ? "truthy" : "falsy") + " is one of the 5 falsy values.");
+console.log((!!"0" ? "truthy" : "falsy") + " the string isn't empty.");
+console.log((!!!"" ? "truthy" : "falsy") + " the empty brackets aren't alone.");
+console.log((!!{} ? "truthy" : "falsy") + " because of empty brackets.");
+console.log((!!`() => {console.log("hello TEKcamp!")` ? "truthy" : "falsy") + " functions are truthy.");
+console.log((!!125 ? "truthy" : "falsy") + " it's a number.");
+console.log((!!undefined ? "truthy" : "falsy") + " because it is one of the 5 falsy value.");
+console.log((!!"" ? "truthy" : "falsy") + " because an empty string is one of the 5 falsy values.");
 
-HELP
-HELP
-HELP
+
 /************************************************************* */
 // Refactor the following code using a switch statement:
 
@@ -234,21 +264,29 @@ function ifToSwitch(day) {
 /************************************************************* */
 // Refactor the following statements to use ternary expressions:
 
+// if (age > 21) console.log("adult");
+// else {
+//   console.log("minor");
+// }
 const age = 10;
-if (age > 21) console.log("adult");
-else {
-  console.log("minor");
-}
+const legal = (age >= 21) ? "adult" : "minor";
+console.log(legal);
 
-if (age > 13 && age < 19) console.log("teen");
-else {
-  console.log("not a teenager");
-}
+// if (age > 13 && age < 19) console.log("teen");
+// else {
+//   console.log("not a teenager");
+// }
 
-if (age > 65) console.log("retired");
-else {
-  console.log("still working...");
-}
+const kid = age > 13 && age < 19 ? "teen" : "not a teenager";
+console.log(kid);
+
+// if (age > 65) console.log("retired");
+// else {
+//   console.log("still working...");
+
+
+  const old = age > 65 ? "retired" : "still working...";
+  console.log(old);
 
 /************************************************************* */
 //Create an object literal representing yourself.  Set it equal to a variable that appropriately describes the object.  Include the following properties:
@@ -287,7 +325,7 @@ let tSills = {
   console.log(tSills.celebrate());
 /************************************************************* */
 
-{
+
   const year = 2021;
   const nums = [1, 2, 3, 4, 5];
   let sum = 0;
@@ -297,74 +335,63 @@ let tSills = {
   //Refactor the following statements into expressions
 
   // 1.
-  if (year > 2000 && year < 2100) {
-    console.log("welcome to the 21st century");
-  }
+  // let year = 2021;
+
+
+  // if (year > 2000 && year < 2100) { 
+  //   console.log("welcome to the 21st century");  
+  
+
+  let year = 1999;
+  let output = (year > 2000 && year < 2100) ? "welcome to the 21st century" : "you must be a time-traveler";
+console.log("It's " + year + ", " + output + "!");
 
   // 2.
-  for (let i = 0; i < nums.length; i++) {
-    sum += nums[i];
-  }
-  console.log(sum);
+ let nums = [1, 2, 3, 4, 5];
+ let sum = 0;
+let numsTotal = nums.reduce(function (acc, val) {
+    return acc + val
+  }, 0)
+  console.log(numsTotal);
 
   // 3.
-  while (i < nums.length) {
-    doubled.push(nums[i] * 2);
-    i++;
-  }
-
+  const nums = [1, 2, 3, 4, 5];
+  const doubled = nums.map(i => i * 2);
   console.log(doubled);
-}
 
+    
 /************************************************************* */
 // Use array methods to solve the following problems.
 
-const nums = [1, 2, 3, 4, 5];
+let nums = [1, 2, 3, 4, 5];
 // Square every number in the array.  Store the squares in a new array.
+let squareEvery = nums.map(x => x ** 2);
+console.log(squareEvery);
 
-//your code...
 
-const fivePlus = [
-  1,
-  3,
-  5,
-  7,
-  9,
-  1,
-  3,
-  5,
-  2,
-  3,
-  1,
-  23,
-  4,
-  232,
-  3,
-  4,
-  1,
-  2,
-  2,
-  2,
-  3,
-  4,
-  4,
-  1,
-  12,
-  11,
-  23,
-  3,
-  4,
-  5,
-];
+
+
 //Remove all numbers that are less than 5.  Store the results in a new array.
-
-//your code...
+const fivePlus = [
+  1,3,5, 7, 9, 1, 3, 5, 2, 3, 1, 23, 4, 232, 3, 4, 1, 2, 2, 2, 3, 4, 4, 1, 12, 11, 23, 3, 4, 5];
+const newFive = fivePlus.filter(i => i > 5);
+console.log(newFive);
 
 // Create an array of 20 randomly generated integers.  Calculate the sum of the elements in the array.
+const emptyArr = Array.from({length: 20}, () => Math.floor(Math.random() * 20));
+console.log(emptyArr);
+
+const sum = (acc, curVal) => acc + curVal;
+console.log(emptyArr.reduce(sum));
 
 //your code...
 
-const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
+let showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
+let divNums = showNums.map(function(nums) {
+  return nums/2;
+});
+console.log(divNums);
+
 //Print out the value of each number divided by 2.  There is no need to store the output in an array.
 
 /************************************************************* */
@@ -380,11 +407,41 @@ const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
         ['android'] => chessCalc() => null
 
         */
+  // pawn = 1,
+  // rook = 5,
+  // bishop = 3,
+  // knight = 3,
+  // queen = 9,
+  // king = null,
+let randChess = [
+  {piece: "pawn",
+  pieceVal: 1},
+  {piece: "rook",
+  pieceVal: 5},
+  {piece: "bishop",
+  pieceVal: 3},
+  {piece: "knight",
+  pieceVal: 3},
+  {piece: "queen",
+  pieceVal: 9},
+  {piece: "king",
+  pieceVal: null},
+];
 
-function chessCalc(pieces) {
-  //your code here
-  let 
-}
+
+
+
+// function chessCalc(pieces, randChess) {
+//   let pieceCal = [];
+//   for (let i = 0; i < pieces.length; i++) {
+//     let cal = randChess.pieces[i];
+//   }
+//   chessCalc(pieces, randChess);
+//   let pieces = ["pawn", "rook", "bishop", "knight", "queen", "king"];
+  // pieces.forEach(piece => {
+  //   if (piece == chessCalc.pawn)
+  //   return
+
 
 /************************************************************* */
 
@@ -400,14 +457,25 @@ const ones = [
   111111111,
   1111111111,
 ];
+ones.reverse();
+console.log(ones);
 //reverse the array, without modifying / `mutating` the ones array.
 
 /************************************************************* */
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
-function performer(cb) {
-  //code goes here
+// function intro(callMe) {
+//  return 'Hey! Call me ' + callMe;
+// }
+function cb(){
+console.log("Taylor finally used a callback.");
 }
+
+function performer(cb) {
+  cb();
+}
+performer(cb);
+
 
 /************************************************************* */
 // For the given list of developers :
@@ -474,45 +542,55 @@ const devs = [
   },
 ];
 
+
 /************************** */
 // Find all devs older than 24
-
-//your code here...
+// let old = devs.filter(x => x.age > 24);
+// console.log(old);
 
 /************************** */
 // Remove all people who are not developers (i.e. no tech stack)
 
-//your code here...
+// let noCode = devs.filter(x => x.tech_stack == null);
+// console.log(noCode);
 
 /************************** */
 // Calculate the total age of all the devs
+// let totalAge = devs.filter(x => x.age += x.age);
+// console.log(totalAge);
 
-//your code here...
 
 /************************** */
 // Find all female devs
 
-//your code here...
+// let femaleDevs = devs.filter(x => x.gender === "f" || x.gender === "F");
+// console.log(femaleDevs);
 
 /************************** */
 // lowercase the genders of every dev
 
-//your code here...
+// let lowGen = devs.filter(x => x.gender = x.gender.toLowerCase());
+// console.log(lowGen);
 
 /************************** */
 // Sort the developers by name
 
-//your code here
+// let sortDevs = devs.sort((a, b) => a.name - b.name ? 1 : -1)
+// let finSort = sortDevs.forEach((e) => e);
+// console.log(finSort);
+
 
 /************************** */
 // Sort the devs by age in descending order
 
-//your code here
+// let lowAge = devs.sort((a,b) => b.age - a.age);
+// console.log(lowAge);
 
 /************************** */
 // Sort the male coders by age
 
-//your code here
+// let maleAge = devs.filter(({gender})=> gender == "m" || gender == "M").sort((a,b) => b.age - a.age);
+// console.log(maleAge);
 
 /************************** */
 // For the list of devs, print out sentences including the name and tech stack of each dev, leaving out other information.  Example output is provided below :
@@ -523,7 +601,15 @@ const devs = [
         Dr. Patel is not a developer.
         */
 
-//your code here
+let devSpec;
+devs.forEach(dev => {
+ devSpec = dev.name ;
+ if (dev['tech_stack']) {
+ devSpec += ' specializes in ' + dev['tech_stack'].join(', ') + '.'
+}
+  else devSpec += ' is not a developer.'
+    console.log (devSpec);
+       });
 
 /************************************************************* */
 // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.
@@ -561,9 +647,13 @@ const numbersMixed = [
   [],
 ];
 
-function maxNumber(numbers) {
-  //your code...
-}
+// function maxNumber(numbers) {
+// let theNumbers = numbers.forEach((nums) => {
+//   if (typeof numbers === number) {
+//   console.log(nums);}
+// }
+// )
+// }
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
