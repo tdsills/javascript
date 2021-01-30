@@ -647,36 +647,67 @@ const numbersMixed = [
   [],
 ];
 
-// function maxNumber(numbers) {
+
+// 
 // let theNumbers = numbers.forEach((nums) => {
 //   if (typeof numbers === number) {
 //   console.log(nums);}
 // }
 // )
-// }
+// }function sortNums(numbers, desc = false) {
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
-
-function sortNums(numbers, desc = false) {
+// let string = ("one", "two", "three", "3")
+function maxNumber(numbersMixed) {
+  numbersMixed = numbersMixed.filter((i) => [
+    return (typeof i == '')
+  ])
   //your code...
+  if (parseInt(numbersMixed) == "one") {
+    return 1;
+  } else if (parseInt(numbersMixed) == "two") {
+      return 2;
+  } else (parseInt(numbersMixed) == "three" ||  (parseInt(numbersMixed) == "3")); {
+    return 3;
+  } 
 }
-
+console.log(numbersMixed);
 /************************************************************* */
 //Research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
+var min = 2; //var is how variables used to be called.
+var sec = 60;
+var time = function(min, sec) {
+  return min * sec;
+}
+console.log(time);
+//
 
-//your code...
+
+// ES6
+const min2 = 3; // const & let are the new ways. const is immutable so it helps when keeping a varibale constant.
+const sec2 = 60;
+const time2 = (min2, sec2) => min2 * sec2; // an arrow function takes away extra steps with coding and produces the same answer as before.
+console.log(time2)
 
 /************************************************************* */
 //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
 const mapObj = new Map();
-mapObj.set({ company: "TEKsystems" }, "object");
+const mapObj1 = { company: "TEKsystems" } //"object"
+;
+mapObj.set(numEmployees = 300); //Number
+mapObj.set(3 === "3"); //Boolean: false
+mapObj.set(['happy', 'sad', 'angry']); //Array & Strings
 
-console.log(mapObj.has({ company: "TEKsystems" }));
 
-//The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
+// console.log(mapObj.has({ company: "TEKsystems" }));
 
-//your code...
+//
+
+//The above console.log() statement returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
+
+//console.log(({company: "TEKsystems" } in mapObj1));
+//I'm not sure on this one. 
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
