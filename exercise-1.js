@@ -170,7 +170,7 @@ for (let i = 0; i < 10; i++) {
 }
 
 //your code...
-let i = 0
+let i = 0;
 
 while (i < 10) {
     print i;
@@ -428,7 +428,7 @@ console.log(divNums);
 //   pieceVal: null},
 // ];
 
-//Couldn't figure this one out.
+
 
 
 // function chessCalc(pieces, randChess) {
@@ -442,7 +442,7 @@ console.log(divNums);
   //   if (piece == chessCalc.pawn)
   //   return
 
-
+//Couldn't figure this one out.
 /************************************************************* */
 
 const ones = [
@@ -692,12 +692,12 @@ console.log(time2)
 /************************************************************* */
 //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
 
-const mapObj = new Map();
-const mapObj1 = { company: "TEKsystems" } //"object"
-;
-mapObj.set(numEmployees = 300); //Number
-mapObj.set(3 === "3"); //Boolean: false
-mapObj.set(['happy', 'sad', 'angry']); //Array & Strings
+// const mapObj = new Map();
+// const mapObj1 = { company: "TEKsystems" } //"object"
+// ;
+// mapObj.set(numEmployees = 300); //Number
+// mapObj.set(3 === "3"); //Boolean: false
+// mapObj.set(['happy', 'sad', 'angry']); //Array & Strings
 
 
 // console.log(mapObj.has({ company: "TEKsystems" }));
@@ -716,11 +716,13 @@ mapObj.set(['happy', 'sad', 'angry']); //Array & Strings
 //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
 
 // ex : 2,3 => doMath(2,3) => adding : 5
-const operations = [];
-function doMath(x, y) {}
+const operations = [
+  'x+y', 'x-y', 'x*y', 'x/y'
+];
+function doMath(x, y) {
 
-//your code...
-
+operations.forEach(Math.floor(Math.random(doMath)));
+}
 /************************************************************* */
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 
@@ -730,10 +732,10 @@ function doMath(x, y) {}
 //   function fn(y) {
 //    return function fn(); 
 //    y = y * x;
-    //   }
+//   }
 // }
 // console.log(multiThree)
-//your code...
+//Couldn't get the code to work properly.
 
 //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
@@ -744,13 +746,15 @@ function doMath(x, y) {}
 //     let r = .05
 //   }
 // }
-//your code
+// console.log(stockGain(2));
 
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.
 
 
-// let total = ((function stockGain(500), (function stocks(2));
-//your code...
+// let futureValue = ((function stockGain(500) {}, (function stocks(2){});
+// stockGain(500);
+// stocks(2)
+// console.log(futureValue);
 
 // DO NOT DELETE THIS EXPORT
 module.exports = {
